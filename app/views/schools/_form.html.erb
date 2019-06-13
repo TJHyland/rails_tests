@@ -1,0 +1,29 @@
+<%= @school.id ? "Edit School" : "New School" %>
+
+<%= form_for @school do |f| %>
+  #make one of these for each school param
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true%>
+  
+  <%= f.label :address %>
+  <%= f.text_field :address, required: true%>
+
+  <%= f.label :principal %>
+  <%= f.text_field :principal, required: true%>
+
+  <%= f.label :capacity %>
+  <%= f.number_field :capacity, required: true%>
+
+  <%= f.label :private_school %>
+  <%= f.check_box_tag :private_school, required: true%>
+
+  <%= f.submit%>
+<% end %>
+
+    # t.string "name", null: false
+    # t.string "address", null: false
+    # t.string "principal", null: false
+    # t.integer "capacity", default: 0, null: false
+    # t.boolean "private_school", default: true, null: false
+    # t.datetime "created_at", null: false
+    # t.datetime "updated_at", null: false
